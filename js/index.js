@@ -29,22 +29,22 @@ function SuperMath() {
 
     return { X: numX, Y: numY, znak: math };
   };
-
-  this.calculate = function ({ X, Y, znak }) {
-    switch (znak) {
-      case "+":
-        return X + Y;
-      case "-":
-        return X - Y;
-      case "/":
-        return X / Y;
-      case "*":
-        return X * Y;
-      case "%":
-        return X % Y;
-    }
-  };
 }
+
+SuperMath.prototype.calculate = function ({ X, Y, znak }) {
+  switch (znak) {
+    case "+":
+      return X + Y;
+    case "-":
+      return X - Y;
+    case "/":
+      return X / Y;
+    case "*":
+      return X * Y;
+    case "%":
+      return X % Y;
+  }
+};
 
 var p = new SuperMath();
 var obj = { X: 12, Y: 3, znak: "/" };
