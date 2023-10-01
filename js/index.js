@@ -11,13 +11,9 @@ function Car(make, model, year, release, owner) {
   this.year = year;
   this.release = release;
 
-  this.getOwner = function (owner) {
-    if (ageMore(owner)) {
-      this.owner = owner;
-    }
-  };
-
-  this.getOwner(owner);
+  if (ageMore(owner)) {
+    this.owner = owner;
+  }
 }
 
 function ageMore(owner) {
