@@ -49,16 +49,23 @@ function HTMLElementInput(type, className, id) {
 
 HTMLElementInput.prototype = Object.create(HTMLElement.prototype);
 
-HTMLElementInput.prototype.value = function (value) {
+HTMLElementInput.prototype.getValue = function () {
+  return this.value;
+};
+
+HTMLElementInput.prototype.setValue = function (value) {
   this.value = value;
 };
 
 const input = new HTMLElementInput("text", "input__name", "name");
 
 console.log("----------Start-----------");
+input.setValue("Петя Иванов");
+
+console.log(input.getValue());
+
 input.render();
 input.rotate();
-input.value("Петя Иванов");
 console.log("----------End-----------");
 
 // -----------------  HW -------------------------
