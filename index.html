@@ -1,5 +1,4 @@
 <!-- @format -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +7,42 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Homework</title>
   </head>
+  <style>
+    body {
+      padding: 50px;
+    }
+
+    .diagram {
+      position: relative;
+      margin-top: 50px;
+      width: 30px;
+      min-height: 100px;
+      border: 1px solid tomato;
+    }
+
+    .green {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: green;
+    }
+
+    .red {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+    }
+  </style>
   <body>
+    <input class="input-range" type="range" min="0" max="100" value="0" />
+    <input class="input-num" type="number" min="0" max="100" value="0" />
+
+    <div class="diagram">
+      <div class="green"></div>
+      <div class="red"></div>
+    </div>
+
     <script src="./js/index.js"></script>
   </body>
 </html>
